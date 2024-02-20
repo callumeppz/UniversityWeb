@@ -2,27 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "montserratthin_italic";
-  src: url("montserrat-italic-variablefont_wght-webfont.woff2") format("woff2"),
-    url("montserrat-italic-variablefont_wght-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: italic; /* Changed to 'italic' for italic font style */
-}
-
 html {
   scroll-behavior: smooth; /* Added smooth scrolling behavior */
   overflow-x: hidden;
 }
 
 .flex-row {
-    background-color: #d9d9d9;
-    display: inline-block;
-    padding: 20px; /* Add padding for better spacing */
-  }
+  display: flex;
+  justify-content: flex-start;
 
-body * {
-  @apply transition-colors duration-200;
+  padding: 20px;
+  background-color: rgb(195, 195, 195)
 }
 
 :where(body) {
@@ -48,24 +38,11 @@ body {
   display: block;
 }
 
-
-/* You can specify specific elements where needed */
-/* For example, if you want a container to use the custom font */
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-header {
-  position:sticky;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  background-color: rgb(230, 230, 234);
-  padding: 30px;
-  text-align: left;
-}
 
 .flex-row {
     display: flex;
@@ -106,26 +83,44 @@ header {
     color: #ff0000;
     text-decoration: underline;
   }
+
+
+  .slideshow-container {
+    width: 50%; /* Example width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
   
-  
-  .slide-container {
-    display: flex;
+  /* Styles for the image slideshow */
+  .image-slideshow {
+    max-width: 100%; /* Ensure it doesn't overflow its container */
     overflow: hidden;
-    width: 100%; /* Ensure the container takes up the full width */
-    transition: transform 0.65s;
+    border: 2px solid #000000; /* Black border */
+    margin-bottom: 50px;
   }
-  .slide {
-    flex: 0 0 100%; /* Each slide takes up the full width */
-  }
-  .slide img {
-    width: 80%; /* Ensure each image takes up the full width of its container */
-    padding-left: 350px;
-    height: auto;
-  }
+  
+/* Styles for the individual slideshow images */
+.image {
+  display: none; /* Hide images by default */
+  width: 100%; /* Make images fill the container horizontally */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid black; /* Add a black border around the images */
+  border-radius: 10px; /* Add border radius for a rounded appearance */
+}
+
+/* Additional styling for fading effect or other transitions */
+.fade {
+  animation: fade 1.5s ease-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+  
 
 h1 {
   font-size: inherit;
-
   transition: transform 0.3s;
   /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
@@ -133,25 +128,6 @@ h1 {
   margin-top: 100px;
   font-weight: 100;
   font-size: 80px;
-}
-h1:hover {
-  transform: scale(1.05);
-}
-
-h2 {
-  font-size: 50px;
-  color: #d2b6f7;
-  transition: transform 0.3s;
-  text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7,
-    0 -2px #000000, 1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0,
-    -1px 1px #050ef9;
-  margin-top: 100px;
-  font-weight: 100;
-  font-size: 80px;
-  text-align: center;
-}
-h2:hover {
-  transform: scale(1.05);
 }
 
 h3 {
@@ -169,15 +145,6 @@ h3:hover {
   transform: scale(1.05);
 }
 
-h4 {
-  font-size: inherit;
-  /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
-             1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;*/
-  font-weight: 100;
-  margin-bottom: 5px;
-  font-size: 30px;
-}
-
 p {
   font-size: inherit;
   transition: 0.3s;
@@ -188,55 +155,10 @@ p {
 }
 
 .welcome-text {
-  align-items: center; /* Center vertically and horizontally */
-  padding: 30px;
-  padding-top: 100px;
+  align-items: center;
   transition: 0.3s;
   font-size: inherit;
-  min-height: 60vh; /* Increase the minimum height */
 }
-
-.h1 {
-  padding: 100px;
-  color: #000000;
-}
-
-h2 {
-color: #000000;;
-  padding: 100px;
-  background-image: url(/Images/Computer.jpg);
-}
-
-h2:hover {
-  transform: scale(1.05);
-  background-color: rgba(70, 70, 70, 1);
-  transition: transform 0.4s;
-}
-
-/* Article Text Styles */
-
-.article-text {
-    color: #000000;
-  border: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  opacity: 10;
-  transition: 1.2s;
-  text-align: center;
-  align-items: center;
-  place-items: center;
-}
-
-.article-text:hover {
-  transition: 1.2s;
-  transform: scale(1.05);
-  background-color: rgb(0, 0, 0);
-  opacity: 100;
-  box-shadow: rgba(255, 255, 255, 0.8) 0 0 4px 4px;
-}
-
-/* Button Styles */
 
 .tablinks {
 
@@ -252,34 +174,29 @@ h2:hover {
     text-decoration: underline;
 }
 
-
-.flex-row {
-    background-color: #d9d9d9;
-    display: inline-block;
-    padding: 20px; /* Add padding for better spacing */
-  }
+header {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: rgb(230, 230, 234);
+  padding: 30px;
+  text-align: left;
+  align-items: flex-start; /* Add this line */
+}
   
-  .article-text {
-    text-align: center;
-    
-    border-radius: 20px;
-    margin-top: 20px; /* Increase margin-top for better separation */
-  }
-  
-  .flex-row {
-    display: flex; /* Use flexbox to align cards in a row */
-    justify-content: center; /* Center the content horizontally */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
+  .project-card {
+    display:flexbox;
+    flex: 3;
+    text-align: center; 
+    margin: 40px; 
+    background-color: white;
     padding: 100px;
   }
   
-  .project-card {
-    background-color: white;
-    padding: 40px;
-    width: auto;
-    margin: 10px; /* Adjust margin for spacing between cards */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smoother hover effect */
+  .flex-row {
+    text-align: center;
   }
   
   .project-card:hover {
@@ -324,31 +241,17 @@ h2:hover {
     transition: height 1.8s;
   }
   
-  
   /* Adjustments for Welcome Text */
   .welcome-text {
     text-align: center; /* Center text horizontally */
   }
-  
 
-  label {
-    background-color: #bababa; /* Changed background color */
-    border-radius: 10px; /* Added border radius */
-  }
-  
-  .CVButton {
-    background-color: #050ef9; /* Changed background color */
-  }
-  
-  .CVButton:hover {
-    background-color: #761f7e; /* Changed hover background color */
-  }
-
-  footer {
-    background-color: rgb(212, 212, 212);
-    padding: 30px;
-    text-align: center;
-    text-decoration: underline;
-    text-size-adjust: 100px;
-  }
+/* Footer Styles */
+footer {
+  background-color: rgb(212, 212, 212);
+  padding: 30px;
+  text-align: center;
+  text-decoration: underline;
+  text-size-adjust: 100px;
+}
   
