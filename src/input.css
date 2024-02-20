@@ -8,10 +8,6 @@ html {
 }
 
 .flex-row {
-  display: flex;
-  justify-content: flex-start;
-
-  padding: 20px;
   background-color: rgb(195, 195, 195)
 }
 
@@ -26,6 +22,10 @@ html {
     --background-color: hsl(0, 0%, 100%);
     --text-color: #000000;
   }
+}
+
+.image1 {
+  background-color: #c7c7c7;
 }
 
 body {
