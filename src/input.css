@@ -204,60 +204,49 @@ header {
   align-items: flex-start; /* Add this line */
 }
   
-  .project-card {
-    display:flexbox;
-    flex: 3;
-    text-align: center; 
-    margin: 40px; 
-    background-color: white;
-    padding: 100px;
-  }
-  
-  .flex-row {
-    text-align: center;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px); /* Add slight lift on hover for interactive feel */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
-  }
-  
-  .project-card img {
-    width: 100%; /* Ensure image takes up full width of card */
-    height: auto;
-   
-    border-bottom: 1px solid #ddd; /* Add border at the bottom of each image */
-  }
-  
-  .project-card:hover img {
-    background-color: red;
-    filter: brightness(90%); /* Slightly reduce brightness on hover for visual effect */
-  }
-  
-  .project-card a:hover {
-    text-decoration: underline; /* Add underline on hover for visual feedback */
-  }
-  
-  .project-card {
-    transition: transform 0.8s;
-    cursor: pointer;
-    
-  }
-  
-  .project-card:hover,
-  .project-card:checked {
-    cursor: pointer;
-    background-color: red;
-    overflow: hidden;
-  }
-  
-  .project-card:hover img,
-  .project-card:checked img {
-    height: 10%;
-    background-color: white;
-    cursor: pointer;
-    transition: height 1.8s;
-  }
+.project-card {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  flex: 3;
+  align-items: center; /* Center content horizontally */
+  margin: 10px; /* Adjust margin */
+  background-color: white;
+  padding: 10px; /* Adjust padding */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  max-width: 100%; /* Ensure image doesn't overflow container */
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-card:hover img {
+  filter: brightness(90%);
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.project-card:hover,
+.project-card:checked {
+  background-color: red;
+}
+
+.project-card:hover img,
+.project-card:checked img {
+  height: auto; /* Revert image height on hover */
+}
+
   
   /* Adjustments for Welcome Text */
   .welcome-text {

@@ -544,10 +544,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -559,14 +555,6 @@ video {
 
 .block {
   display: block;
-}
-
-.flex {
-  display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-0 {
@@ -585,16 +573,8 @@ video {
   flex-direction: row;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .bg-gray-900 {
@@ -629,24 +609,8 @@ video {
   line-height: 1rem;
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .transition-transform {
   transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -874,62 +838,53 @@ header {
 }
 
 .project-card {
-  display:flexbox;
+  display: flex;
+  flex-direction: column;
+  /* Stack content vertically */
   flex: 3;
-  text-align: center;
-  margin: 40px;
+  align-items: center;
+  /* Center content horizontally */
+  margin: 10px;
+  /* Adjust margin */
   background-color: white;
-  padding: 100px;
-}
-
-.flex-row {
+  padding: 10px;
+  /* Adjust padding */
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  /* Add slight lift on hover for interactive feel */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  /* Adjust box shadow on hover */
+  transform: translateY(-3px);
+  /* Slight lift on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
-  width: 100%;
-  /* Ensure image takes up full width of card */
+  max-width: 100%;
+  /* Ensure image doesn't overflow container */
   height: auto;
   border-bottom: 1px solid #ddd;
-  /* Add border at the bottom of each image */
 }
 
 .project-card:hover img {
-  background-color: red;
   filter: brightness(90%);
-  /* Slightly reduce brightness on hover for visual effect */
 }
 
 .project-card a:hover {
   text-decoration: underline;
-  /* Add underline on hover for visual feedback */
-}
-
-.project-card {
-  transition: transform 0.8s;
-  cursor: pointer;
 }
 
 .project-card:hover,
-  .project-card:checked {
-  cursor: pointer;
+.project-card:checked {
   background-color: red;
-  overflow: hidden;
 }
 
 .project-card:hover img,
-  .project-card:checked img {
-  height: 10%;
-  background-color: white;
-  cursor: pointer;
-  transition: height 1.8s;
+.project-card:checked img {
+  height: auto;
+  /* Revert image height on hover */
 }
 
 /* Adjustments for Welcome Text */
@@ -971,10 +926,6 @@ footer {
     width: 50%;
   }
 
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -997,8 +948,8 @@ footer {
     margin-bottom: 2rem;
   }
 
-  .md\:w-1\/3 {
-    width: 33.333333%;
+  .md\:w-1\/4 {
+    width: 25%;
   }
 
   .md\:p-8 {
@@ -1052,8 +1003,8 @@ footer {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-1\/4 {
-    width: 25%;
+  .xl\:w-1\/6 {
+    width: 16.666667%;
   }
 
   .xl\:text-2xl {
