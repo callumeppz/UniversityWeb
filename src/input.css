@@ -173,6 +173,25 @@ p {
 .tablinks:hover {
     text-decoration: underline;
 }
+.indent-px {
+  margin-left: 20px; /* Add indentation */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.indent-px a {
+  text-decoration: none; 
+  color: #333; 
+  display: block; 
+  padding: 5px 0; 
+}
+
+.indent-px a:hover {
+  background-color: #f0f0f0; 
+  color: red;
+  text-decoration: underline;
+}
+
 
 header {
   position: sticky;
