@@ -209,9 +209,9 @@ header {
   flex-direction: column; /* Stack content vertically */
   flex: 3;
   align-items: center; /* Center content horizontally */
-  margin: 10px; /* Adjust margin */
+  margin: 30px; /* Adjust margin */
   background-color: white;
-  padding: 10px; /* Adjust padding */
+  padding: 0px; /* Adjust padding */
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;

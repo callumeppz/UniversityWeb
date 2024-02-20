@@ -549,16 +549,16 @@ video {
   margin-bottom: 1rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .mr-0 {
   margin-right: 0px;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -869,10 +869,10 @@ header {
   flex: 3;
   align-items: center;
   /* Center content horizontally */
-  margin: 10px;
+  margin: 30px;
   /* Adjust margin */
   background-color: white;
-  padding: 10px;
+  padding: 0px;
   /* Adjust padding */
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1002,6 +1002,11 @@ footer {
     line-height: 1;
   }
 
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1043,6 +1048,11 @@ footer {
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-sm {
