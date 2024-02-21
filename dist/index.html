@@ -64,10 +64,10 @@
           </button>
         </a> <!-- Added closing tag for <a> -->
       </nav>
-    </header>
 
-    <div class="image1 flex flex-col md:flex-row r p-4 md:p-6 lg:p-10">
-      <div class="image-container mr-0 md:mr-6 lg:mr-10 mb-4 md:mb-0">
+    </header>
+    <div class="image1 flex flex-col md:flex-row r p-2 md:p-4 lg:p-6 ml-2 md:ml-4 lg:ml-6">
+      <div class="image-container mr-0 md:mr-4 lg:mr-6 mb-2 md:mb-0">
           <a href="https://www.reading.ac.uk"><img src="legacy-uor-home.png" alt=""></a>
       </div>
       <div class="buttons1 flex flex-wrap text-sm md:text-base lg:text-lg">
@@ -77,67 +77,110 @@
           <a href="ContactME.html" class="nav-link"><strong>About us</strong></a>
           <a target="_blank" href="https://github.com/callumeppz" class="nav-link"><strong>Contact us</strong></a>
       </div>
-  </div>
-      
-  <main class="p-4 md:p-8 lg:p-16">
-    <div class="welcome-text">
-      <div class="slider-thumb">
-        <div class="slider-thumb"></div>
-        <div class="text-container">
-          <h1 id="TITLE" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-            <strong>Welcome</strong>
-          </h1>
-        </div>
-  
-        <div class="textarea">
-          <hr class="my-4 md:my-8 lg:my-12 h-0.1 bg-gray-900" />
-  
-          <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-            Welcome to the University Research Website. Explore our insights, <br>about section, and contact information to learn more.
-          </p>
-        </div>
-      </div>
-     
     </div>
-  </main>
+    
+
 
   <div class="iframe-container p-4 md:p-8 lg:p-16">
     <iframe src="https://landbot.online/v3/H-2129921-HPP5EL6X3KTM74H1/index.html" class="iframe-content" style="width: 100%; height: 100%; box-shadow: 0 20px 80px rgba(0,0,0,.6); border-radius: 5px; overflow: hidden; border: none; display: inline-block;"></iframe>
   </div>
   
 
-
   <script>
+    var timeout; // Variable to store timeout reference
+  
     window.addEventListener('scroll', function() {
       var iframe = document.getElementById('scrollingFrame');
       var rect = iframe.getBoundingClientRect();
       var offset = window.innerHeight - rect.height;
       if (window.scrollY > offset) {
-        iframe.style.position = 'fixed';
-        iframe.style.bottom = '0';
+        clearTimeout(timeout); // Clear previous timeout to prevent flickering
+        timeout = setTimeout(function() {
+          iframe.style.position = 'fixed';
+          iframe.style.bottom = '0';
+          iframe.style.transition = 'bottom 2.5s ease-in-out'; // Adjust the duration and timing function as needed
+        }, 20000); // Adjust the delay (in milliseconds) as needed
       } else {
-        iframe.style.position = 'static';
+        clearTimeout(timeout); // Clear previous timeout to prevent flickering
+        timeout = setTimeout(function() {
+          iframe.style.position = 'static';
+          iframe.style.transition = 'bottom 2.5s ease-in-out'; // Smooth transition back to static position
+        }, 20000); // Adjust the delay (in milliseconds) as needed
       }
     });
   </script>
   
+  
 
-
-    <div class="slideshow-container w-full md:p-8 lg:px-8">
-
-      <!-- Slideshow images -->
-      <div class="image-slideshow">
-          <div class="image fade">
-              <img src="THE-award-homepage.jpg" alt="Mountain Top">
+  <div class="slideshow-container w-full md:p-8 lg:px-8 mx-auto relative">
+  <!-- Slideshow images -->
+  <div class="image-slideshow relative">
+      <div class="image fade relative">
+          <img src="THE-award-homepage.jpg" alt="Mountain Top" class="w-full">
+          <div class="absolute top-0 right-0">
+              <div class="text-right">
+                  <h1>
+                      <span style="color: #fff; background-color: #d8131d; font-weight: bold; font-size: 40%; margin-right: 25px;">Welcome to the University of Reading's Research Website.</span>
+                  </h1>
+                  <h1>
+                      <span class="strapline banner-1" style="font-size: 50%; color: #434142; font-weight: 700; background-color: #fff; padding-left: 10px; padding-right: 10px; margin-right: 25px;">Find the Index's below</span>
+                  </h1>
+              </div>
           </div>
-          <div class="image fade">
-              <img src="climate-stripes-cliff-banner.jpg" alt="Palm Trees">
+      </div>
+      <div class="image fade relative">
+          <img src="climate-stripes-cliff-banner.jpg" alt="Palm Trees" class="w-full">
+          <div class="absolute top-0 right-0">
+              <div class="text-right">
+                  <h1>
+                      <span style="color: #fff; background-color: #d8131d; font-weight: bold; font-size: 40%; margin-right: 25px;">Welcome to the University of Reading's Research Website.</span>
+                  </h1>
+                  <h1>
+                      <span class="strapline banner-1" style="font-size: 50%; color: #434142; font-weight: 700; background-color: #fff; padding-left: 10px; padding-right: 10px; margin-right: 25px;">Find the Index's below<br/></span>
+                  </h1>
+              </div>
           </div>
-          <div class="image fade">
-              <img src="LGBTQ-history-month-banner-desktop.jpg" alt="Neon Sign">
+      </div>
+      <div class="image fade relative">
+          <img src="LGBTQ-history-month-banner-desktop.jpg" alt="Neon Sign" class="w-full">
+          <div class="absolute top-0 right-0">
+              <div class="text-right">
+                  <h1>
+                      <span style="color: #fff; background-color: #d8131d; font-weight: bold; font-size: 40%; margin-right: 25px;">Welcome to the University of Reading's Research Website.</span>
+                  </h1>
+                  <h1>
+                      <span class="strapline banner-1" style="font-size: 50%; color: #434142; font-weight: 700; background-color: #fff; padding-left: 10px; padding-right: 10px; margin-right: 25px;">Find the Index's below<br/></span>
+                  </h1>
+              </div>
           </div>
       </div>
   </div>
+</div>
+
+
+      
+<main class="p-4 md:p-8 lg:p-16">
+  <div class="welcome-text">
+    <div class="slider-thumb">
+      <div class="slider-thumb"></div>
+      <div class="text-container">
+        <h1 id="TITLE" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <strong>Welcome</strong>
+        </h1>
+      </div>
+
+      <div class="textarea">
+        <hr class="my-4 md:my-8 lg:my-12 h-0.1 bg-gray-900" />
+
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+          Welcome to the University Research Website. Explore our insights, <br>about section, and contact information to learn more.
+        </p>
+      </div>
+    </div>
+   
+  </div>
+</main>
+
 
 
   <script src="main.js"></script>

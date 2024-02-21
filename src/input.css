@@ -8,7 +8,7 @@ html {
 }
 
 .flex-row {
-  background-color: rgb(195, 195, 195)
+  background-color: rgb(195, 195, 195);
 }
 
 :where(body) {
@@ -43,39 +43,39 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-.indent-px {
-  display: flex;
-}
+    .indent-px {
+      display: flex;
+    }
 
-.indent-px > div {
-  flex: 1;
-  margin-right: 20px;
-}
+    .indent-px > div {
+      flex: 1;
+      margin-right: 20px;
+    }
 
-.indent-px:last-child {
-  margin-right: 0;
-}
+    .indent-px:last-child {
+      margin-right: 0;
+    }
 
-.indent-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    .indent-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-.indent-content h5 {
-  margin-top: 0;
-}
+    .indent-content h5 {
+      margin-top: 0;
+    }
 
-.indent-content li {
-  list-style-type: none;
-}
+    .indent-content li {
+      list-style-type: none;
+    }
 
 .flex-row {
     display: flex;
@@ -117,37 +117,39 @@ body {
     text-decoration: underline;
   }
 
-
   .slideshow-container {
-    width: 50%; /* Example width */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 100%; /* Adjust the width as needed */
+    padding: 1000px;
   }
   
   /* Styles for the image slideshow */
   .image-slideshow {
     max-width: 100%; /* Ensure it doesn't overflow its container */
     overflow: hidden;
+
     border: 2px solid #000000; /* Black border */
     margin-bottom: 50px;
   }
   
-/* Styles for the individual slideshow images */
-.image {
-  display: none; /* Hide images by default */
-  width: 100%; /* Make images fill the container horizontally */
-  height: auto; /* Maintain aspect ratio */
-  border: 2px solid black; /* Add a black border around the images */
-}
-
-/* Additional styling for fading effect or other transitions */
-.fade {
-  animation: fade 1.5s ease-out;
-}
-
-@keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
+  /* Styles for the individual slideshow images */
+  .image {
+    
+    display: none; /* Hide images by default */
+    width: 100%; /* Make images fill the container horizontally */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid black; /* Add a black border around the images */
+  }
+  
+  /* Additional styling for fading effect or other transitions */
+  .fade {
+    animation: fade 1s ease-out;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+  
 
   
 
@@ -187,7 +189,6 @@ p {
 }
 
 .welcome-text {
-  align-items: center;
   transition: 0.3s;
   font-size: inherit;
 }
@@ -283,7 +284,7 @@ header {
   
   /* Adjustments for Welcome Text */
   .welcome-text {
-    text-align: center; /* Center text horizontally */
+   text-align: center;
   }
 
 /* Footer Styles */
