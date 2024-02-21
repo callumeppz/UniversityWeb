@@ -9,6 +9,8 @@ html {
 
 .flex-row {
   background-color: rgb(195, 195, 195);
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 :where(body) {
