@@ -9,6 +9,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f7f7f7;
+      margin: 0; /* Add this line to remove default margin */
     }
 
     .container {
@@ -71,14 +72,58 @@
       margin-top: 0;
     }
 
+    .sidebar {
+      height: 100%;
+      width: 250px; /* Set the initial width of the sidebar */
+      position: fixed;
+      z-index: 1000; /* Ensure sidebar appears on top of other elements */
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
     /* End customization */
   </style>
 </head>
 <body>
 
-
-  
-  <div class="header-container">
+    <div class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="Project1.html">Study and life</a>
+        <a href="About.html">Research</a>
+        <a href="ContactME.html">About us</a>
+        <a target="_blank" href="https://github.com/callumeppz">Contact us</a>
+    </div>
+<div class="header-container">
     <header>
         <a href="index.html">
           <button class="tablinks hover:underline focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
@@ -105,68 +150,78 @@
                 Students
           </button>
         </a> <!-- Added closing tag for <a> -->
-      </nav>
     </header>
+</div>
 
-    <div class="image1 flex flex-col md:flex-row r p-4 md:p-6 lg:p-10">
-      <div class="image-container mr-0 md:mr-6 lg:mr-10 mb-4 md:mb-0">
-          <a href="https://www.reading.ac.uk"><img src="legacy-uor-home.png" alt=""></a>
-      </div>
-      <div class="buttons1 flex flex-wrap text-sm md:text-base lg:text-lg">
-          <a href="index.html" class="nav-link"><strong>Home</strong></a>
-          <a href="Project1.html" class="nav-link"><strong>Study and life</strong></a>
-          <a href="About.html" class="nav-link"><strong>Research</strong></a>
-          <a href="ContactME.html" class="nav-link"><strong>About us</strong></a>
-          <a target="_blank" href="https://github.com/callumeppz" class="nav-link"><strong>Contact us</strong></a>
-      </div>
-  </div>
+<div class="image1 flex flex-col md:flex-row r p-4 md:p-6 lg:p-10">
+    <div class="image-container mr-0 md:mr-6 lg:mr-10 mb-4 md:mb-0">
+        <a href="https://www.reading.ac.uk"><img src="legacy-uor-home.png" alt=""></a>
+    </div>
+    <div class="buttons1 flex flex-wrap text-sm md:text-base lg:text-lg">
+        <a href="index.html" class="nav-link"><strong>Home</strong></a>
+        <a href="Project1.html" class="nav-link"><strong>Study and life</strong></a>
+        <a href="About.html" class="nav-link"><strong>Research</strong></a>
+        <a href="ContactME.html" class="nav-link"><strong>About us</strong></a>
+        <a target="_blank" href="https://github.com/callumeppz" class="nav-link"><strong>Contact us</strong></a>
+    </div>
+</div>
       
 
-  <!-- Flex row -->
-  <div class="container flex flex-col md:flex-row r p-4 md:p-6 lg:p-10">
-    <!-- Research report content -->
-    <div class="report-content">
-      <div class="report-header">
-        <h1 class="report-title">Report Template</h1>
-        <p class="report-subtitle">Subtitle</p>
-      </div>
+<!-- Flex row -->
+<div class="container flex flex-col md:flex-row r p-4 md:p-6 lg:p-10">
+  <!-- Research report content -->
+  <div class="report-content">
+    <div class="report-header">
+      <h1 class="report-title">Report Template</h1>
+      <p class="report-subtitle">Subtitle</p>
+    </div>
 
-      <div class="report-section">
-        <h2>Introduction</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
-      </div>
+    <div class="report-section">
+      <h2>Introduction</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
+    </div>
 
-      <div class="report-section">
-        <h2>Methodology</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
-      </div>
+    <div class="report-section">
+      <h2>Methodology</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
+    </div>
 
-      <div class="report-section">
-        <h2>Results</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
-      </div>
+    <div class="report-section">
+      <h2>Results</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
+    </div>
 
-      <div class="report-section">
-        <h2>Discussion</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
-      </div>
+    <div class="report-section">
+      <h2>Discussion</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
+    </div>
 
-      <div class="report-section">
-        <h2>Conclusion</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
-      </div>
+    <div class="report-section">
+      <h2>Conclusion</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. </p>
     </div>
   </div>
+</div>
 
-    <!-- Footer for Social Links -->
-    <footer class="mt-8">
-        <div class="links text-center">
-          <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-            Created in 2024, Social links:
-            <a target="_blank" href="https://github.com/callumeppz">GitHub</a>
-          </p>
-        </div>
-      </footer>
-    </body>
-  </html>
+<!-- Footer for Social Links -->
+<footer class="mt-8">
+    <div class="links text-center">
+      <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+        Created in 2024, Social links:
+        <a target="_blank" href="https://github.com/callumeppz">GitHub</a>
+      </p>
+    </div>
+</footer>
+
+<script>
+    function openNav() {
+      document.querySelector(".sidebar").style.width = "250px";
+    }
   
+    function closeNav() {
+      document.querySelector(".sidebar").style.width = "0";
+    }
+  </script>
+
+</body>
+</html>
