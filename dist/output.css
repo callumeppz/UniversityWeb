@@ -552,10 +552,6 @@ video {
   position: fixed;
 }
 
-.relative {
-  position: relative;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -620,18 +616,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.p-12 {
-  padding: 3rem;
 }
 
 .text-center {
@@ -699,7 +683,7 @@ html {
 }
 
 .image1 {
-  background-color: #c7c7c7;
+  background-color: #f2f2f2;
 }
 
 body {
@@ -887,8 +871,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 99;
-  background-color: rgb(230, 230, 234);
-  padding: 30px;
+  background-color: rgb(218, 218, 218);
+  padding: 50px;
   text-align: left;
   align-items: flex-start;
   /* Add this line */
