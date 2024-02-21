@@ -159,7 +159,9 @@ h1 {
   /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
     */
-  margin-top: 100px;
+
+  text-transform: capitalize;
+  color: black;
   font-weight: 100;
   font-size: 80px;
 }
@@ -191,6 +193,7 @@ p {
 .welcome-text {
   transition: 0.3s;
   font-size: inherit;
+  text-transform: capitalize;
 }
 
 .tablinks {
