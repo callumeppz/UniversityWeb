@@ -43,6 +43,39 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.indent-px {
+  display: flex;
+}
+
+.indent-px > div {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.indent-px:last-child {
+  margin-right: 0;
+}
+
+.indent-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.indent-content h5 {
+  margin-top: 0;
+}
+
+.indent-content li {
+  list-style-type: none;
+}
 
 .flex-row {
     display: flex;
