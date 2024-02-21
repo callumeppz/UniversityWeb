@@ -11,9 +11,29 @@
     .bg-gray-900 {
       background-color: rgb(161, 19, 19);
     }
+    .iframe-container {
+    position: fixed;
+    bottom: 2%;
+    left: 10%;
+    opacity: 0.5;
+    transform: translateX(-50%);
+    height: 20%;
+    box-shadow: 0 20px 80px rgba(0,0,0,.6);
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+    z-index: 999; 
+    transition: opacity 0.3s ease, height 0.3s ease; 
+  }
+
+  .iframe-container:hover {
+    height: 50%; 
+    opacity: 1;
+  }
   </style>
 </head>
 <body>
+  
 
   <div class="header-container">
     <header>
@@ -58,27 +78,48 @@
       </div>
   </div>
       
-    <!-- Main Content -->
-    <main class="p-4 md:p-8 lg:p-16">
-      <div class="welcome-text">
-        <div class="slider-thumb">
-          <div class="slider-thumb"></div>
-          <div class="text-container">
-            <h1 id="TITLE" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-              <strong>Welcome</strong>
-            </h1>
-          </div>
-
-          <div class="textarea">
-            <hr class="my-4 md:my-8 lg:my-12 h-0.1 bg-gray-900" />
-
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-              Welcome to the University Research Website. Explore our insights, <br>about section, and contact information to learn more.
-            </p>
-          </div>
+  <main class="p-4 md:p-8 lg:p-16">
+    <div class="welcome-text">
+      <div class="slider-thumb">
+        <div class="slider-thumb"></div>
+        <div class="text-container">
+          <h1 id="TITLE" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <strong>Welcome</strong>
+          </h1>
+        </div>
+  
+        <div class="textarea">
+          <hr class="my-4 md:my-8 lg:my-12 h-0.1 bg-gray-900" />
+  
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            Welcome to the University Research Website. Explore our insights, <br>about section, and contact information to learn more.
+          </p>
         </div>
       </div>
-    </main>
+     
+    </div>
+  </main>
+
+  <div class="iframe-container">
+    <iframe src="https://landbot.online/v3/H-2129921-HPP5EL6X3KTM74H1/index.html" style="width: 400px;height: 620px;box-shadow: 0 20px 80px rgba(0,0,0,.6);border-radius: 5px;overflow: hidden;border: none; display: inline-block;"></iframe>
+  </div>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var iframe = document.getElementById('scrollingFrame');
+      var rect = iframe.getBoundingClientRect();
+      var offset = window.innerHeight - rect.height;
+      if (window.scrollY > offset) {
+        iframe.style.position = 'fixed';
+        iframe.style.bottom = '0';
+      } else {
+        iframe.style.position = 'static';
+      }
+    });
+  </script>
+  
+
 
     <div class="slideshow-container w-full md:p-8 lg:px-8">
 
@@ -95,7 +136,8 @@
           </div>
       </div>
   </div>
-  
+
+
   <script src="main.js"></script>
   <div class="flex-row flex-wrap">
     <div class="project-card w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/6">
